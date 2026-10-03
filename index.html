@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafy Pérez — Multimedia</title>
+  <meta name="description" content="Rafy Pérez — portafolio multimedia: multicámara, drones, video 360°, IA y 3D. Un one-man shop que pone las cámaras, graba y edita.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rafyperez.net/">
+  <meta property="og:title" content="Rafy Pérez — Multimedia">
+  <meta property="og:description" content="Multicámara · Drones · 360° · IA · 3D — Un one-man shop: pongo las cámaras, grabo y edito.">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Import map for the Gaussian Splat viewer (loaded on demand only) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a class="brand" href="#top">Rafy&nbsp;Pérez</a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#reel" data-i18n="nav.reel">Reel</a>
+      <a href="#capacidades" data-i18n="nav.caps">Capacidades</a>
+      <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+      <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Portafolio multimedia</p>
+      <h1>Rafy Pérez</h1>
+      <p class="tagline" data-i18n="hero.tagline">Multicámara · Drones · 360° · IA · 3D. Pongo las cámaras, grabo y edito.</p>
+      <a class="cta" href="#reel" data-i18n="hero.cta">Ver el reel</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <main>
+    <!-- ============ REEL ============ -->
+    <section class="section" id="reel">
+      <div class="wrap">
+        <p class="eyebrow reveal" data-i18n="reel.eyebrow">Reel</p>
+        <h2 class="reveal" data-i18n="reel.title">Lo más reciente</h2>
+        <p class="lede reveal" data-i18n="reel.desc">Pieza documental creada con un pipeline asistido por IA: imágenes generadas con Gemini, Veo 3 y Seedance, música con SUNO y edición en DaVinci Resolve.</p>
+        <div class="yt-wrap reveal">
+          <div class="yt" data-video="Yqm-xNAqMJc" data-title="Puerto Rico vs. WBC"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CAPACIDADES ============ -->
+    <section class="section section-alt" id="capacidades">
+      <div class="wrap">
+        <p class="eyebrow reveal" data-i18n="caps.eyebrow">Capacidades</p>
+        <h2 class="reveal" data-i18n="caps.title">Cinco formas de contar historias</h2>
+        <p class="lede reveal" data-i18n="caps.subtitle">Cada tarjeta trae una pieza real.</p>
+
+        <div class="cards">
+          <!-- Multicámara -->
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="12" rx="2"/><path d="M15 10.5l7-3.5v10l-7-3.5"/></svg>
+            </div>
+            <h3 data-i18n="cap1.title">Multicámara</h3>
+            <p data-i18n="cap1.desc">Grabación y edición con múltiples cámaras sincronizadas: eventos, música y acción desde todos los ángulos.</p>
+            <div class="yt" data-video="2HaeK7k_jak" data-title="Multicámara"></div>
+          </article>
+
+          <!-- Drones -->
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.2"/><circle cx="19" cy="5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><rect x="9" y="9" width="6" height="6" rx="1.5"/><path d="M6.5 6.5L9 9M17.5 6.5L15 9M6.5 17.5L9 15M17.5 17.5L15 15"/></svg>
+            </div>
+            <h3 data-i18n="cap2.title">Drones</h3>
+            <p data-i18n="cap2.desc">Tomas aéreas cinematográficas con drones, incluyendo cámara 360°.</p>
+            <div class="yt" data-video="qckFEER9sBw" data-title="Dron 360°"></div>
+          </article>
+
+          <!-- 360 -->
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><circle cx="12" cy="12" r="2.5"/></svg>
+            </div>
+            <h3 data-i18n="cap3.title">Video inmersivo 360°</h3>
+            <p data-i18n="cap3.desc">Video esférico navegable: el espectador decide a dónde mirar.</p>
+            <div class="yt" data-video="qckFEER9sBw" data-title="Video 360°"></div>
+            <p class="hint" data-i18n="hint360">Arrastra para mirar alrededor</p>
+          </article>
+
+          <!-- IA -->
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+            </div>
+            <h3 data-i18n="cap4.title">IA en producción</h3>
+            <p data-i18n="cap4.desc">Generación de imagen, video y música asistida por IA, con edición y criterio humano.</p>
+            <div class="yt" data-video="Yqm-xNAqMJc" data-title="Puerto Rico vs. WBC"></div>
+            <div class="yt" data-video="D9rP3RyD-Dw" data-title="Héctor Lavoe"></div>
+          </article>
+
+          <!-- Splats / 3D -->
+          <article class="card reveal card-wide">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8.5 5v9L12 21.5 3.5 16.5v-9z"/><path d="M12 11.5L3.5 6.7M12 11.5l8.5-4.8M12 11.5V21"/></svg>
+            </div>
+            <h3 data-i18n="cap5.title">Gaussian Splats &amp; 3D</h3>
+            <p data-i18n="cap5.desc">Capturas volumétricas (Gaussian Splats) y renders 3D explorables directo en el navegador.</p>
+            <div id="splat-panel" class="splat-panel" aria-live="polite">
+              <!-- Filled by app.js: viewer or placeholder -->
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <section class="section" id="proyectos">
+      <div class="wrap">
+        <p class="eyebrow reveal" data-i18n="proj.eyebrow">Proyectos</p>
+        <h2 class="reveal" data-i18n="proj.title">Selección del canal</h2>
+        <p class="lede reveal" data-i18n="proj.subtitle">Cada pieza muestra una técnica en acción.</p>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="yt" data-video="Yqm-xNAqMJc" data-title="Puerto Rico vs. WBC"></div>
+            <h3>Puerto Rico vs. WBC</h3>
+            <p data-i18n="p1.desc">Pipeline de IA: Gemini · Veo 3 · Seedance 2.0 · Runway · Freepik · Música SUNO · Edición DaVinci Resolve.</p>
+            <div class="tags"><span data-i18n="tag.ai">IA</span><span data-i18n="tag.doc">Documental</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="yt" data-video="2HaeK7k_jak" data-title="Multicámara"></div>
+            <h3 data-i18n="p2.title">Multicámara en vivo</h3>
+            <p data-i18n="p2.desc">Cobertura con múltiples ángulos sincronizados.</p>
+            <div class="tags"><span data-i18n="tag.multi">Multicámara</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="yt" data-video="qckFEER9sBw" data-title="Dron 360°"></div>
+            <h3 data-i18n="p3.title">Dron 360°</h3>
+            <p data-i18n="p3.desc">Vuelo con dron y cámara 360°: arrastra para mirar alrededor.</p>
+            <div class="tags"><span data-i18n="tag.drone">Drones</span><span>360°</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="yt" data-video="D9rP3RyD-Dw" data-title="Héctor Lavoe"></div>
+            <h3 data-i18n="p4.title">Héctor Lavoe — historia documental</h3>
+            <p data-i18n="p4.desc">Documental biográfico con pipeline asistido por IA.</p>
+            <div class="tags"><span data-i18n="tag.ai">IA</span><span data-i18n="tag.doc">Documental</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="section section-alt" id="sobre-mi">
+      <div class="wrap narrow">
+        <p class="eyebrow reveal" data-i18n="about.eyebrow">Sobre mí</p>
+        <h2 class="reveal" data-i18n="about.title">Sobre mí</h2>
+        <p class="bio reveal" data-i18n="about.bio">Soy Rafy Pérez, un one-man shop de multimedia. Grabo desde niño —empecé a escondidas con la cámara 8mm de mi hermano— y edito desde los tiempos del Commodore Amiga. Hoy trabajo con cámaras mirrorless, pocket y 360°, edito en DaVinci Resolve y mezclo décadas de oficio con las herramientas más nuevas, incluyendo IA. Pongo las cámaras, grabo y edito: mayormente por el disfrute de hacerlo.</p>
+        <a class="btn reveal" href="https://www.youtube.com/@rafyperez" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.6 3.5 12 3.5 12 3.5s-4.6 0-7.7.4c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S.8 9.1.8 11v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.4 7.6.4s4.6 0 7.7-.4c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8V11c0-1.9-.2-3.8-.2-3.8zM9.8 15V8.4l6.2 3.3L9.8 15z"/></svg>
+          <span data-i18n="about.yt">Ver el canal de YouTube</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section" id="contacto">
+      <div class="wrap narrow center">
+        <p class="eyebrow reveal" data-i18n="contact.eyebrow">Contacto</p>
+        <h2 class="reveal" data-i18n="contact.title">Contacto</h2>
+        <p class="lede reveal" data-i18n="contact.desc">¿Un proyecto, una idea, una colaboración? Escríbeme.</p>
+        <div class="contact-btns reveal">
+          <a class="btn btn-primary" href="mailto:Rafyperez@hotmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+            <span data-i18n="contact.email">Escríbeme</span>
+          </a>
+          <a class="btn" href="https://www.youtube.com/@rafyperez" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.6 3.5 12 3.5 12 3.5s-4.6 0-7.7.4c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S.8 9.1.8 11v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.4 7.6.4s4.6 0 7.7-.4c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8V11c0-1.9-.2-3.8-.2-3.8zM9.8 15V8.4l6.2 3.3L9.8 15z"/></svg>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 Rafy Pérez</span>
+      <span class="footer-tag" data-i18n="footer.tag">Multimedia · 3D · IA</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.149.0/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
